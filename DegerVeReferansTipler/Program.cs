@@ -25,6 +25,7 @@ namespace DegerVeReferansTipler
             Console.WriteLine(sayilar1[2]);
             //Array - değer tip
             //interface - referans tip
+
         }
     }
 }
