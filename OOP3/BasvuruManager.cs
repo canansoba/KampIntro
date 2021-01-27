@@ -8,16 +8,16 @@ namespace OOP3
     {
        // private object konutKrediManager;
        //Method injection
-        public void BasvuruYap(IKrediManager krediManager,ILoggerService loggerService)
+        public void BasvuruYap(IKrediManager krediManager,List<ILoggerService> loggerServices)
         {
             //Başburu bilgileri değerlendirme
             //
             krediManager.Hesapla();
-            loggerService.Log();
-            //foreach (var loggerService in loggerService)
-            //{
-            //    loggerService.Log();
-            //}
+            //loggerService.Log();
+            foreach (var loggerService in loggerServices)
+            {
+                loggerService.Log();
+            }
             //konutKrediManager.Hesapla();
         }
 
